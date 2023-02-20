@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+/.next
+/.vscode
+package-lock.json
+*-error.log
+.idea
+# production
+/build

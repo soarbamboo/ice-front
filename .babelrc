@@ -1,0 +1,32 @@
+{
+    "presets": [
+        "next/babel"
+    ],
+    "plugins": [
+        [
+            "styled-components-px2rem",
+            {
+                "rootValue": 16,
+                // "unitPrecision": 6,
+                // "minPixelValue": 2,
+                // "multiplier": 1,
+                // "transformRuntime": false
+            }
+        ],
+        [
+            "styled-components",
+            {
+                "ssr": true
+            }
+        ],
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ],
+        [
+            "@babel/plugin-proposal-optional-chaining"
+        ],
+    ]
+}
