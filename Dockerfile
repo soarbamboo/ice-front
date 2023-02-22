@@ -6,8 +6,6 @@ WORKDIR /home/ice-front
 
 COPY  . /home/ice-front
 
-USER node
-
 COPY package.json /home/ice-front/
 COPY yarn.lock /home/ice-front/
 
