@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start -p 7001",
     "lint": "next lint",
-    "analyzer": "ANALYZE=true next build",
-    "prestart": "npm run build"
+    "analyzer": "ANALYZE=true next build"
   },
   "keywords": [],
   "author": "",
