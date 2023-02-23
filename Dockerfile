@@ -10,13 +10,17 @@ COPY  . /home/ice-front
 COPY package.json /home/ice-front/
 COPY yarn.lock /home/ice-front/
 
-# RUN npm config set registry https://registry.npm.taobao.org/ \
-#     &&  npm install --force
+RUN apk update && apk upgrade \
+    && apk add --no-cache bash git openssh
 
-# RUN npm run build
+RUN  npm install -g npm 
+RUN npm config set registry https://registry.npm.taobao.org/ \
+    &&  npm install --force \
+    &&  npm run build
 
-# ENV HOST 0.0.0.0 &&  PORT 7001
 
-# EXPOSE 7001
+ENV HOST 0.0.0.0 &&  PORT 7001
 
-# CMD [ "npm", "start" ]
+EXPOSE 7001
+
+CMD [ "npm", "start" ]
