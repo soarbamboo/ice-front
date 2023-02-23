@@ -11,7 +11,7 @@ COPY package.json /home/ice-front/
 COPY yarn.lock /home/ice-front/
 
 RUN npm config set registry https://registry.npm.taobao.org/ \
-    &&  npm install 
+    &&  npm install --force
 
 RUN npm run build
 
