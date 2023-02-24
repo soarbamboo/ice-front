@@ -12,15 +12,17 @@ COPY yarn.lock /home/ice-front/
 
 # RUN apk update && apk upgrade \
 #    && apk add --no-cache bash git openssh
+RUN apt-get install -y procps
 
-RUN  npm install -g npm 
-RUN npm config set registry http://registry.npm.taobao.org/ 
-RUN npm install --force 
-RUN npm run build
+
+RUN npm install -g yarn 
+RUN yarn config set registry https://registry.npm.taobao.org
+RUN yarn
+RUN yarn
 
 
 ENV HOST 0.0.0.0 &&  PORT 7001
 
 EXPOSE 7001
 
-CMD [ "npm", "start" ]
+CMD [ "yarn", "start" ]
