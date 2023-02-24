@@ -15,7 +15,7 @@ COPY yarn.lock /home/ice-front/
 # RUN apt install -y procps
 
 
-RUN npm install -g yarn 
+RUN npm install -g yarn  --force
 RUN yarn config set registry https://registry.npm.taobao.org
 RUN yarn
 RUN yarn
