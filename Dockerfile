@@ -14,7 +14,7 @@ RUN apk update && apk upgrade \
     && apk add --no-cache bash git openssh
 
 RUN  npm install -g npm 
-RUN npm config set registry https://registry.npm.taobao.org/ \
+RUN npm config set registry http://registry.npm.taobao.org/ \
     &&  npm install --force \
     &&  npm run build
 
