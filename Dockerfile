@@ -14,9 +14,9 @@ COPY yarn.lock /home/ice-front/
 #    && apk add --no-cache bash git openssh
 
 RUN  npm install -g npm 
-RUN npm config set registry http://registry.npm.taobao.org/ \
-    &&  npm install --force \
-    &&  npm run build
+RUN npm config set registry http://registry.npm.taobao.org/ 
+RUN npm install --force 
+RUN npm run build
 
 
 ENV HOST 0.0.0.0 &&  PORT 7001
