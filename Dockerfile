@@ -8,6 +8,7 @@ COPY  . /home/ice-front
 
 
 COPY package.json /home/ice-front/
+COPY package-lock.json /home/ice-front/
 COPY yarn.lock /home/ice-front/
 
 # RUN apk update && apk upgrade \
