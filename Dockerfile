@@ -10,9 +10,9 @@ COPY  . /home/ice-front
 COPY package.json /home/ice-front/
 COPY yarn.lock /home/ice-front/
 
-# RUN apk update && apk upgrade \
-#    && apk add --no-cache bash git openssh
-RUN apk install -y procps
+RUN apk update && apk upgrade \
+    && apk add --no-cache bash git openssh
+# RUN apk install -y procps
 
 
 RUN npm install -g yarn  --force
