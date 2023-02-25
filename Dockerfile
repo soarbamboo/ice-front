@@ -19,7 +19,7 @@ RUN npm install -g yarn  --force
 # RUN yarn config delete proxy  \
 #     && npm config rm proxy \
 #     && npm config rm https-proxy
-RUN yarn config set registry https://registry.npm.taobao.org && yarn build
+RUN yarn config set registry https://registry.npm.taobao.org && yarn  && yarn build
 
 ENV HOST 0.0.0.0 &&  PORT 7001
 
