@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "yarn && PORT=8310 node server.js",
     "build": "next build",
-    "start": "next start -p 7001",
+    "start": "next start -p 8091",
     "lint": "next lint",
     "analyzer": "ANALYZE=true next build"
   },
