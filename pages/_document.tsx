@@ -39,8 +39,8 @@ export default class MyDocument extends Document<DocumentProps> {
                     <meta name="full-screen" content="yes" />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                     <meta name="mobile-web-app-capable" content="yes" />
-                    <link rel="icon" href="./images/icon.ico" type="image/x-icon" />
-                    <link rel="apple-touch-icon" href="/yahu.ico" type="image/x-icon" />
+                    <link rel="icon" href="http://img.netbugs.cn/7ef31f24c8bb.ico" type="image/x-icon" />
+                    <link rel="apple-touch-icon" href="http://img.netbugs.cn/7ef31f24c8bb.ico" type="image/x-icon" />
                     {!!description && <meta property="description" content={description} />}
                     {!!keywords && <meta property="keyswords" content={keywords} />}
                 </Head>

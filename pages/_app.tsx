@@ -101,7 +101,7 @@ export default class MyApp extends App {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
                     />
-                    <title>{pageProps?.title || "Kabuda"}</title>
+                    <title>{pageProps?.title || "Pulse"}</title>
                 </Head>
 
                 <BaseLayout path={path} query={query} userInfo={customerInfo} >

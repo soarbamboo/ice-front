@@ -41,8 +41,8 @@ class BaseLayout extends React.PureComponent<BaseLayoutProps> {
                         <NavContent>
                             <BrandLogo>
                                 <a href={"/"}>
-                                    <img src="./images/index_icon.png" alt={""} />
-                                    <span>卡布达</span>
+                                    <img src="http://img.netbugs.cn/7ef31f24c8bb.ico" alt={""} />
+                                    <span>Pulse</span>
                                 </a>
                             </BrandLogo>
                             <MenuList>

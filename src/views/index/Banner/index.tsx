@@ -11,10 +11,11 @@ import "swiper/css/effect-fade";
 
 
 const images = [
-    'https://images.unsplash.com/photo-1675910568522-c187fd74d5b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    'https://images.unsplash.com/photo-1675557056210-5cd4cae357f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2826&q=80',
-    'https://images.unsplash.com/photo-1675456110409-0746ade01a14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1858&q=80',
-    'https://images.unsplash.com/photo-1673454753170-83c796e48bd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2875&q=80'
+    "http://img.netbugs.cn/5963baa4caaa.jpg",
+    "http://img.netbugs.cn/c2cab1340b08.jpg",
+    "http://img.netbugs.cn/3da31a343938.jpg",
+    "http://img.netbugs.cn/0a69a6c4a77b.jpg",
+    "http://img.netbugs.cn/8857f6646399.jpg"
 ]
 
 export default class IndexBanner extends React.Component {
@@ -41,7 +42,9 @@ export default class IndexBanner extends React.Component {
                     }}
                 >
                     {
-                        images.map((item: any) => <SwiperSlides key={item}><img src={item} /></SwiperSlides>)
+                        images.map((item: any) => <SwiperSlides key={item} >
+                            <div style={{ backgroundImage: `url(${item})` }}></div>
+                        </SwiperSlides>)
                     }
 
                 </SwiperBox>

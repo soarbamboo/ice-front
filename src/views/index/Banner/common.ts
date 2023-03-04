@@ -7,10 +7,11 @@ export const SwiperBox = styled(Swiper)`
 
 `
 export const SwiperSlides = styled(SwiperSlide)`
-    & img{
-        width:100% ;
-        height:100%;
-        display:block ;
+    &>div{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 `;
