@@ -9,6 +9,7 @@ import Router from "next/router";
 import { BaseRequest } from "@/src/utils/context/context";
 import { getBaseInfo } from "@/src/utils/context/baseInfo";
 import Constant from "@/src/utils/context/constant";
+import { HeaderStaticParams, LayOutTitleType } from "@/src/components/layout/type";
 
 
 if (!__SERVER__) {
@@ -89,6 +90,11 @@ export default class MyApp extends App {
     // 对页面重新渲染
     render() {
         const { Component, pageProps, path, query, customerInfo } = this.props;
+        const {
+            TITLE,
+            NEED_HEADER = true,
+            TITLE_TYPE = LayOutTitleType.INDEX
+        } = (Component as unknown) as HeaderStaticParams;
         if (!__SERVER__) {
             Constant.customerInfo = customerInfo;
         }
@@ -103,10 +109,13 @@ export default class MyApp extends App {
                     />
                     <title>{pageProps?.title || "Pulse"}</title>
                 </Head>
+                {
+                    NEED_HEADER ? <BaseLayout path={path} query={query} userInfo={customerInfo} LayOutTitleType={TITLE_TYPE}>
+                        <Component {...pageProps} baseStore={new BaseStore()} />
+                    </BaseLayout> : <Component {...pageProps} baseStore={new BaseStore()} />
 
-                <BaseLayout path={path} query={query} userInfo={customerInfo} >
-                    <Component {...pageProps} baseStore={new BaseStore()} />
-                </BaseLayout>
+                }
+
                 <LoadingWrapper id="loading"><Loading /></LoadingWrapper>
             </React.Fragment>
         );

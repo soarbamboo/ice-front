@@ -29,7 +29,7 @@ class BaseLayout extends React.PureComponent<BaseLayoutProps> {
         this.setState({ scrollTop })
     }
     render() {
-        const { isShowLayout, children, path } = this.props;
+        const { isShowLayout, children, path, LayOutTitleType } = this.props;
         if (!isShowLayout) return children;
         // const Img = require("../../assets/images/icon.png");
         return (

@@ -4,5 +4,16 @@ export interface BaseLayoutProps {
     children?: any;
     path: string;
     query: any;
-    userInfo: any
+    userInfo: any;
+    LayOutTitleType: LayOutTitleType
+}
+export interface HeaderStaticParams {
+    NEED_HEADER?: Boolean;
+    TITLE?: string;
+    TITLE_TYPE?: LayOutTitleType
+}
+
+export enum LayOutTitleType {
+    INDEX,// 首首页
+    ARTILE,// 文章详情页
 }

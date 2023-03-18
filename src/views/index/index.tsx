@@ -1,7 +1,8 @@
 import React from 'react'
 import IndexBanner from './Banner';
 
-import { Main, IndexCard, CardContent, CardContentTitle } from './common';
+import { Main, IndexCard, CardContent, CardContentTitle, Footer, FooterIcp } from './common';
+import IndexArtile from './IndexArtile';
 import { IndexProps } from './types';
 class Home extends React.Component<IndexProps> {
     componentDidMount(): void {
@@ -14,11 +15,13 @@ class Home extends React.Component<IndexProps> {
                 <IndexCard>
                     <CardContent>
                         <CardContentTitle>
-
+                            <div>推荐文章</div>
                         </CardContentTitle>
+                        <IndexArtile />
                     </CardContent>
                 </IndexCard>
-            </Main>
+                <Footer><FooterIcp href='https://beian.miit.gov.cn/' target="_blank">陕ICP备19024533号</FooterIcp></Footer>
+            </Main >
         )
     }
 }
